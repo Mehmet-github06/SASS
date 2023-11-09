@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  color: white;
+  background: linear-gradient(to right, #457ec7, #56ccf2);
+}
+
+header {
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 5px 30px #d84991;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+}
+header img {
+  width: 100px;
+}
+header img:hover {
+  scale: 110%;
+  transition: 1s;
+}
+header ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+header ul li a {
+  text-decoration: none;
+  color: #d84991;
+}
+header ul li a:hover {
+  text-decoration: underline;
+  transition: 1s;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  line-height: 2rem;
+}
+.banner aside h2 {
+  color: black;
+  font-weight: bolder;
+}
+.banner aside p {
+  text-indent: 15px;
+  text-align: justify;
+}
+.banner aside button {
+  border: none;
+  background-color: #d84991;
+  border-radius: 20px;
+  padding: 0.7rem;
+}
+.banner aside button:hover {
+  background-color: #56ccf2;
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
+  scale: 95%;
+}
+.banner img {
+  width: 40%;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.cards {
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+}
+.cards .card1 {
+  border-radius: 20px;
+  color: rgb(32, 22, 22);
+  border: none;
+  background-color: red;
+  text-align: center;
+  width: 25%;
+  height: 12rem;
+  flex: 1;
+}
+.cards .card2 {
+  border-radius: 20px;
+  color: black;
+  border: none;
+  background-color: yellow;
+  text-align: center;
+  width: 25%;
+  height: 12rem;
+  flex: 1;
+}
+.cards .card3 {
+  border-radius: 20px;
+  color: red;
+  border: none;
+  background-color: rgb(0, 255, 21);
+  text-align: center;
+  width: 25%;
+  height: 12rem;
+  flex: 1;
+}
+.cards .card4 {
+  border-radius: 20px;
+  color: rgb(223, 224, 235);
+  border: none;
+  background-color: blue;
+  text-align: center;
+  width: 25%;
+  height: 12rem;
+  flex: 1;
+}
+
+.articles {
+  display: flex;
+  gap: 1rem;
+  margin-top: 5px;
+}
+.articles .article1, .articles .article2 {
+  background-color: #191654;
+  flex: 1;
+  height: 10rem;
+  border-radius: 20px;
+  padding: 5px;
+}
+.articles .article2 {
+  background-color: #457ec7;
+}
+
+@media screen and (max-width: 600px) {
+  .banner {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .banner .button-div {
+    text-align: center;
+  }
+}
+footer {
+  margin-top: 1rem;
+}
+footer p {
+  background-color: #d84991;
+  text-align: center;
+}
+footer .social-icons {
+  display: flex;
+}
+footer .social-icons .social1 {
+  flex: 1;
+  margin-top: 1rem;
+  width: 5rem;
+  font-size: 1rem;
+  background-color: #f7f7f7;
+  color: black;
+}
+footer .social-icons .social2 {
+  flex: 1;
+  margin-top: 1rem;
+  width: 5rem;
+  font-size: 2rem;
+  background-color: black;
+  color: red;
+}
+footer .social-icons .social3 {
+  flex: 1;
+  margin-top: 1rem;
+  width: 5rem;
+  font-size: 3rem;
+  background-color: #e8e8e8;
+  color: brown;
+}
+footer .social-icons .social4 {
+  flex: 1;
+  margin-top: 1rem;
+  width: 5rem;
+  font-size: 4rem;
+  background-color: black;
+  color: green;
+}
+footer .social-icons .social5 {
+  flex: 1;
+  margin-top: 1rem;
+  width: 5rem;
+  font-size: 5rem;
+  background-color: #d9d9d9;
+  color: yellow;
+}
+
+/*# sourceMappingURL=style.css.map */

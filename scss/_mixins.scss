@@ -1,0 +1,14 @@
+
+@import "./variables";
+
+@mixin card($bg,$color){
+    border-radius: 20px;
+    // border:$myBorder;
+    color: $color;
+    border: none;
+    background-color: $bg;
+    text-align: center;
+    width: 25%;
+    height: 12rem;
+    flex: 1;
+}

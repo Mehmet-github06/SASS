@@ -1,0 +1,180 @@
+@import "./variables";
+@import "./reset";
+@import "./mixins";
+
+body {
+  font-family: $fontFamily;
+  font-size: 20px;
+  color: $fontColor;
+  background: linear-gradient(to right, #457ec7, #56ccf2);
+}
+
+//! HEADER KISMI*******************
+
+header {
+  background-color: transparent;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 5px 30px #d84991;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+
+  img {
+    width: 100px;
+    &:hover {
+      scale: 110%;
+      transition: 1s;
+    }
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    li {
+      a {
+        text-decoration: none;
+        color: #d84991;
+        &:hover {
+          text-decoration: underline;
+          transition: 1s;
+        }
+      }
+    }
+  }
+}
+
+//! BANNER KISMI *****************
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  // background-color: #56CCF2;
+  line-height: 2rem;
+
+  aside {
+    h2 {
+      color: black;
+      font-weight: $fontWeight;
+    }
+    p {
+      text-indent: 15px;
+      text-align: justify;
+    }
+    button {
+      border: none;
+      background-color: #d84991;
+      border-radius: 20px;
+      padding: 0.7rem;
+      &:hover {
+        background-color: #56ccf2;
+        cursor: pointer;
+        transition: 0.5s;
+        color: $fontColor;
+        scale: 95%;
+      }
+    }
+  }
+
+  img {
+    width: 40%;
+    max-width: 600px;
+    min-width: 300px;
+  }
+}
+
+// !CARDS KISMI
+.cards {
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+  .card1 {
+    @include card(red , rgb(32, 22, 22));
+  }
+  .card2 {
+    @include card(yellow, black);
+  }
+  .card3 {
+    @include card(rgb(0, 255, 21), red);
+  }
+  .card4 {
+    @include card(blue, rgb(223, 224, 235));
+  }
+}
+
+// !article kısmı
+
+.articles {
+  display: flex;
+  gap: 1rem;
+  margin-top: 5px;
+
+  .article1 {
+    background-color: #191654;
+    flex: 1;
+    height: 10rem;
+    border-radius: 20px;
+    padding: 5px;
+  }
+  .article2 {
+    @extend .article1;
+    background-color: #457ec7;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner {
+    flex-direction: column;
+    gap: 1rem;
+    .button-div {
+      text-align: center;
+    }
+  }
+}
+//! footer kısmı
+
+footer{
+    margin-top: 1rem;
+    p{
+        background-color: #d84991;
+        text-align: center;
+    }
+
+    
+
+    .social-icons{
+        display: flex;
+     
+        $textColors:black,red,brown,green,yellow;
+
+        @for $i from 1 through length($textColors) {
+
+            .social#{$i}{
+                flex: 1;
+                margin-top: 1rem;
+                width: 5rem;
+                font-size: $i * 1rem;
+                @if $i %2 == 0 {
+                    background-color: darken(black,$i*3);
+
+                }@else{
+                    background-color: darken(white,$i*3);
+                }
+
+                color:nth($textColors , $i );
+                
+
+            }
+
+        }
+
+
+    }
+}
